@@ -1,0 +1,524 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #e8d5d2;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* mise en forme spécifique de la page d'accueil */
+
+.fenetre,
+.fenetreAdmin {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: #daeef5;
+    box-shadow: 0px 0px 20px 20px rgba(0, 0, 0, 0.4);
+    width: 85%;
+    margin-top: 100px;
+}
+
+.titre1 {
+    font-size: 32px;
+    font-family: "Josefin Sans", Helvetica, Arial, sans-serif;
+    margin: 20px;
+    font-weight: 900;
+}
+
+.titre2 {
+    margin-top: 10px;
+    margin-bottom: 50px;
+    font-size: 24px;
+    font-family: "Josefin Sans", Helvetica, Arial, sans-serif;
+}
+
+form#myform label {
+    display: inline-block;
+    width: 250px;
+}
+form#myform input {
+    display: inline-block;
+}
+form#myform button {
+    text-align: center;
+    background-color: lightgray;
+    border: 3px solid;
+    border-radius: 5px;
+    width: 100px;
+    height: 30px;
+    box-shadow: 10px 5px 8px #888888;
+    margin: 40px;
+    font-weight: bold;
+    transition-duration: 0.5s;
+}
+form#myform button:hover {
+    color: black;
+    transform: scale(1.1);
+    transition-duration: 0.5s;
+    letter-spacing: +2px;
+    font-size: 15px;
+    border: none;
+    box-shadow: 20px 10px 15px #888888;
+}
+
+.erreur {
+    color: red;
+    font-weight: bold;
+    font-size: 24px;
+}
+/* mise en forme de la partie "connexion" */
+
+.connect {
+    display: flex;
+    flex-direction: column;
+}
+
+.message {
+    display: none;
+}
+.deconnect {
+    margin: 1vw auto auto auto;
+}
+
+/* mise en forme de la page principale */
+
+.page {
+    display: flex;
+    flex-direction: column;
+
+    background-color: #cfcfdf;
+    box-shadow: 0px 0px 20px 20px rgba(0, 0, 0, 0.4);
+    width: 92%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2vw;
+    height: max-content;
+}
+
+header {
+    flex: shrink 0;
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    text-align: center;
+    font-size: 35px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 15px;
+    margin-bottom: auto;
+
+    font-family: "Dancing Script", Georgia, Times, serif;
+}
+
+h2 {
+    text-align: center;
+    font-size: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-family: "Josefin Sans", Helvetica, Arial, sans-serif;
+}
+
+/* barre de navigation */
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+nav {
+    flex-shrink: 0;
+    margin-top: 20px;
+    width: 100%;
+    background-color: #be977e;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    height: 66px;
+}
+
+/* menu pour les mobiles */
+
+.menu_mobile {
+    display: flex;
+    align-items: flex-end;
+    height: 20px;
+    padding-top: 40px;
+}
+
+.choix_menu {
+    display: block;
+    padding-left: 15%;
+    width: 64%;
+    align-items: center;
+    font-family: "Josefin Sans", Helvetica, Arial, sans-serif;
+    font-size: 32px;
+    color: black;
+    font-weight: bold;
+}
+
+.burger {
+    width: 45px;
+    height: 35px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    background-color: transparent;
+    align-content: center;
+    padding-left: 8px;
+}
+
+.bar {
+    display: block;
+    width: 28px;
+    height: 4px;
+    left: 0px;
+    background-color: black;
+    border-radius: 3px;
+    transition: background-color 0.5s ease-in-out;
+}
+.appnav .bar {
+    width: 0;
+    background: transparent;
+}
+
+.bar::before,
+.bar::after {
+    content: "";
+    width: 28px;
+    height: 4px;
+    left: 8px;
+    align-content: center;
+    background-color: black;
+    border-radius: 3px;
+    position: absolute;
+    transition: transform 0.5s ease-in-out;
+}
+.bar::before {
+    transform: translateY(-8px);
+}
+.bar::after {
+    transform: translateY(8px);
+}
+
+.appnav .bar::before {
+    transform: rotate(-45deg);
+}
+
+.appnav .bar::after {
+    transform: rotate(45deg);
+}
+
+/* onglets de navigation */
+.navbar_lien {
+    opacity: 0;
+    transition: all 2s;
+}
+
+.navbar_lien.appnav2 {
+    position: absolute;
+    width: 85%;
+    opacity: 1;
+    transition: all 2s;
+    background-color: #be977e;
+    z-index: 2;
+    margin-top: 10px;
+}
+
+.navbar_lien.appnav2 li {
+    box-shadow: 0px 0px 0px 0px #000, 0px 0px 37px 0px #ececec inset;
+}
+.navbar_lien.appnav2 a {
+    text-decoration: none;
+    display: block;
+}
+
+.navlien {
+    text-align: left;
+    padding-left: 15%;
+    font-family: "Josefin Sans", Helvetica, Arial, sans-serif;
+    font-size: 32px;
+    padding-top: 18px;
+    line-height: 45px;
+    padding-bottom: 18px;
+}
+
+a {
+    color: black;
+}
+
+.menu {
+    width: 75%;
+    margin: auto;
+}
+
+section {
+    /* height: auto; */
+    flex-grow: 1;
+    z-index: 1;
+}
+.titrepresent {
+    font-family: "Dancing Script", Georgia, Times, serif;
+    font-size: clamp(15px, 6vw, 35px);
+    text-align: center;
+    font-weight: bold;
+    padding-top: 20px;
+}
+.presentation {
+    padding-top: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-indent: 50px;
+    font-size: 1.2rem;
+    font-style: oblique;
+}
+
+.presentation.fin {
+    text-align: center;
+}
+
+section > h3 {
+    font-family: "Dancing Script", Georgia, Times, serif;
+    font-size: 2.2rem;
+    text-align: right;
+    padding-right: 25%;
+    font-weight: bold;
+}
+
+footer {
+    display: none;
+}
+
+/* page contact */
+.contact {
+    padding: 30px;
+}
+/* page commande */
+
+.standard {
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+.personal {
+    border: 6px #be977e solid;
+    width: 90%;
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+}
+
+fieldset {
+    padding: 20px;
+}
+
+legend {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+textarea {
+    width: 90%;
+}
+
+/* slideshow */
+.galerie > h1 {
+    font-family: "Dancing Script", Georgia, Times, serif;
+    font-size: clamp(20px, 7vw, 35px);
+    text-align: center;
+    font-weight: bold;
+}
+.slideshow {
+    position: relative;
+    width: 100%;
+    display: flex;
+    margin: 2vw auto 2vw auto;
+    overflow: hidden;
+    max-width: 680px;
+    height: auto;
+}
+
+.slide {
+    position: relative;
+    width: 100%;
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+    animation: gliss 25s infinite;
+}
+
+@keyframes gliss {
+    0% {
+        left: 0px;
+    }
+    5% {
+        left: 0%;
+    }
+    25% {
+        left: -100%;
+    }
+    30% {
+        left: -100%;
+    }
+    50% {
+        left: -200%;
+    }
+    55% {
+        left: -200%;
+    }
+    75% {
+        left: -300%;
+    }
+    80% {
+        left: -300%;
+    }
+    100% {
+        left: 0px;
+    }
+}
+
+/* adaptation "grands écrans" */
+
+@media screen and (min-width: 880px) {
+    /* accueil */
+    a {
+        text-decoration: none;
+    }
+    .fenetre {
+        width: 45%;
+    }
+
+    /* page principale */
+
+    .message {
+        display: block;
+        margin: auto;
+    }
+    .deconnect {
+        margin: auto;
+    }
+    .page {
+        margin-top: 30px;
+    }
+    nav {
+        height: auto;
+    }
+    .presentation {
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+    .navbar_lien {
+        display: flex;
+        align-content: center;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        opacity: 1;
+    }
+    .navlien {
+        border-bottom: none;
+        font-size: 20px;
+        padding-left: 8px;
+        padding-right: 8px;
+        padding-top: 0px;
+    }
+    h1 {
+        font-size: 54px;
+    }
+    h2 {
+        font-size: 25px;
+    }
+    .navlien > a::after {
+        display: block;
+        content: "";
+        width: 0;
+        height: 2px;
+        background-color: white;
+        transition: width 0.4s;
+    }
+    .navlien:hover > a::after {
+        width: 100%;
+    }
+    .menu_mobile {
+        display: none;
+    }
+
+    footer {
+        flex: shrink 0;
+        display: block;
+        bottom: 0;
+        background-color: #be977e;
+        width: 100%;
+        font-family: "Josefin Sans", Helvetica, Arial, sans-serif;
+        font-size: 20px;
+        color: black;
+    }
+
+    .footer1 {
+        width: 100%;
+        text-align: center;
+        padding: 5px;
+    }
+    .footer2 > ul {
+        display: flex;
+        justify-content: space-around;
+        text-align: center;
+        padding: 5px;
+    }
+
+    .footerli > a::after {
+        display: block;
+        content: "";
+        width: 0;
+        height: 2px;
+        background-color: white;
+        transition: width 0.4s;
+    }
+    .footerli:hover > a::after {
+        width: 100%;
+    }
+    /* page commande */
+    .commande {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .personal {
+        margin: 20px;
+        width: 500px;
+    }
+    .standard {
+        width: 90%;
+    }
+}
+
+/* page administration */
+.title {
+    font-size: 2.5rem;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.fenetreAdmin {
+    padding: 25px;
+    max-width: 1100px;
+}
+
+.fenetreAdmin h2 {
+    padding: 40px 0 20px;
+    text-decoration: underline;
+}
+
+fieldset {
+    padding: 20px;
+    width: 800px;
+    margin: auto;
+}
+
+.ajout .btn, .suppr .btn  {
+  padding: 0 5px ;
+}
