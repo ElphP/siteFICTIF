@@ -24,7 +24,7 @@ session_start();
     <link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Dancing+Script' rel='stylesheet' type='text/css'>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-     <meta name="robots" content="noindex,nofollow">
+    <meta name="robots" content="noindex,nofollow">
 </head>
 
 <body>
@@ -78,10 +78,10 @@ session_start();
             <h1 class="titre1">Me contacter</h1>
             <hr style="height: 2px; width: 20%; background-color: black; margin: auto">
 
-            <h1 class="titre1">WANG RunPu</h1>
+            <h1 class="titre1">FICTIF Amélie</h1>
             <h2>
-                06 49 76 57 02<br>
-                wrp_girl@hotmail.com
+                XX XX XX XX XX<br>
+                XXXXXX@hotmail.com
             </h2>
         </div>
 

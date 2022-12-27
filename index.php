@@ -34,7 +34,7 @@ if (isset($_GET['erreur'])) {
 
 
     <div class="fenetre">
-        <h1 class="titre1">Bienvenue sur le site de <span style="white-space: nowrap">WANG RunPu</span></h1>
+        <h1 class="titre1">Bienvenue sur le site de <span style="white-space: nowrap">FICTIF Amélie</span></h1>
         <br><br>
         <h1 class="titre2">Page de connection</h1>
         <form id="myform" action="RP1.php" method="post">
