@@ -1,4 +1,4 @@
-# siteFICTIF
+# Site avec page d'authentification en PHP
 Site fictif composé d'une page d'authentification (que j'ai par ailleurs lié à une base SQL), 
 une page d'administration (qui permet de rajouter des Login et mot de passe automatisé dans la baseSQL pour ouvrir le site à de nouveaux "adhérents")
 une page d'accueil (avec galerie photo)
