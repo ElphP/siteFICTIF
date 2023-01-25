@@ -5,3 +5,5 @@ une page d'accueil (avec galerie photo)
 etc...
 site non achevé car non utile, il s'agissait d'un exercice pour me permettre de coder en PHP.
 Dans le cas d'un site réel, j'aurais bien sûr enlevé l'animation JavaScript sur le bouton Validation qui donne trop d'informations sur les mots de passe utilisés!
+ 
+ Aller sur la page d'entrée du site: [Fictif](https://betadev.elphegeproisy.com/RP1 "site Fictif") 
