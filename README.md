@@ -7,3 +7,7 @@ site non achevé car non utile, il s'agissait d'un exercice pour me permettre de
 Dans le cas d'un site réel, j'aurais bien sûr enlevé l'animation JavaScript sur le bouton Validation qui donne trop d'informations sur les mots de passe utilisés!
  
  Aller sur la page d'entrée du site: [Fictif](https://betadev.elphegeproisy.com/RP1 "site Fictif") 
+
+Identifiants et Mot de passe pour vous connecter:
+id: AMELIE mdp: c18A2ePt
+id: LAURENT mdp: n2Felg83ou
